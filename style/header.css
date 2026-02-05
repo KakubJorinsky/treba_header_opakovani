@@ -2,7 +2,7 @@ header{
     height: 100px;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    position: relative;
+
 
     .wrapper{
         display: flex;
@@ -24,29 +24,32 @@ header{
                 width: auto;
             }
         }
+
         .hamburger{
             display: flex;
             flex-direction: column;
             gap: 7px;
             width: 35px;
-            cursor: pointer;
             justify-content: center;
+            cursor: pointer;
             background: none;
             border: none;
 
             .stick{
                 border: 2px solid black;
+                border-radius: 10px;
                 height: 2px;
                 width: 100%;
-                border-radius: 10px;
             }
+            
         }
+
         nav{
             position: absolute;
-            height: 100%;
-            width: 50%;
             background-color: white;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            height: 100%;
+            width: 50%;
             margin: 0 -36px;
             z-index: 10;
             display: flex;
@@ -60,13 +63,16 @@ header{
                 font-weight: 600;
                 text-decoration: none;
                 color: black;
+                font-family: Arial, Helvetica, sans-serif;
+
             }
         }
 
-        @media screen and (min-width: 768px) {
+        @media only screen and (min-width: 768px) {
             .hamburger{
                 display: none;
             }
+
             nav{
                 display: flex;
                 justify-content: flex-end;
@@ -79,15 +85,16 @@ header{
                     font-weight: 500;
                     font-size: 21px;
                     font-family: Arial, Helvetica, sans-serif;
-                    transition: ease .5s all;
+                    transition: ease .3s all;
                 }
 
                 a:hover{
                     color: red;
-                    transform: scale(1.15);
+                    /*font-size: 23px;*/
+                    transform: scale(1.04);
+                    /*text-decoration: underline; */
                 }
             }
-        }
-        
+        }   
     }
 }
