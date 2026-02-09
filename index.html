@@ -3,36 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opakování header k maturitě</title>
-
-    <link rel="stylesheet" href="style/header.css">
-    <link rel="stylesheet" href="style/style.css">
-
-    <script src="/script/script.js"></script>
+    <title>Střední škola stropologická</title>
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="/style/style.css">
+    <script src="/script/script.js" defer></script>
 </head>
 <body>
+
     <header>
         <div class="wrapper">
             <a href="/" class="wrapper-logo">
-                <img src="/imgs/logo.webp" alt="Logo">
+                <img src="/imgs/logo.webp" alt="Strop">
             </a>
-            <button class="hamburger">
-                <span class="stick"></span>
-                <span class="stick"></span>
-                <span class="stick"></span>
-            </button>
+            
             <nav>
-                <a href="#">Úvod</a>
+                <a href="#">Domů</a>
+                <a href="#">Obory</a>
+                <a href="#">Aktuality</a>
                 <a href="#">Kontakt</a>
-                <a href="#">Ceník</a>
+                <a href="#">Školní jídelna</a>
+                <a href="#">Domov mládeže</a>
+                <a href="#">Pro veřejnost</a>
+                <a href="#" class="btn-login"><img class="bakalari-logo" src="/imgs/bakalari_logo.png" alt="bakalari"> Bakaláři</a>
             </nav>
+            
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
+
     <main>
+        <section class="hero">
+            <div class="wrapper hero-content">
+                
+                <div class="badge">
+                    <span class="dot"></span> Přijímací řízení 2026 otevřeno
+                </div>
 
+                <h1>Střední škola stropologická<br>Plzeň</h1>
+                <p class="hero-text">
+                    Moderní vzdělání pro budoucnost. Připravujeme žáky na úspěšnou kariéru v oblasti stropologických technologií a stropového designu.
+                </p>
+
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">Naše obory ></a>
+                    <a href="#" class="btn btn-outline">Kontaktujte nás</a>
+                </div>
+
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <strong>-8</strong>
+                        <span>Žáků</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>π</strong>
+                        <span>Maturitních oborů</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>1</strong>
+                        <span>Učební obory</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </main>
-    <footer>
 
-    </footer>
 </body>
 </html>

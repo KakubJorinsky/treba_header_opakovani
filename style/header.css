@@ -1,100 +1,88 @@
-header{
-    height: 100px;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+header {
+    height: 80px;
     width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 
-
-    .wrapper{
+    .wrapper {
         display: flex;
         justify-content: space-between;
-        gap: 36px;
+        align-items: center;
         height: 100%;
-        width: 100%;
-        max-width: 1800px;
+        max-width: 1400px;
         margin: auto;
-        padding: 0 36px;
+        padding: 0 20px;
 
-        .wrapper-logo{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-            img{
-                max-height: 90%;
-                width: auto;
-            }
+        .wrapper-logo img {
+            height: 40px;
+            width: auto;
         }
 
-        .hamburger{
+        nav {
             display: flex;
-            flex-direction: column;
-            gap: 7px;
-            width: 35px;
-            justify-content: center;
-            cursor: pointer;
+            gap: 24px;
+            align-items: center;
+
+            a {
+                text-decoration: none;
+                color: #555;
+                font-weight: 500;
+                font-size: 16px;
+                transition: 0.3s;
+
+                &:hover {
+                    color: #2b5cba;
+                }
+            }
+            .bakalari-logo{
+                height: 30px;
+                width: auto;
+                margin-right: 10px;
+            }
+
+            .btn-login {
+                display: flex;
+                align-items: center;
+                background-color: #356ad8;
+                color: white;
+                padding: 8px 16px;
+                border-radius: 4px;
+                
+                &:hover {
+                    background-color: #2a52a8;
+                    color: white;
+                }
+            }
+        }
+        
+        .hamburger {
+            display: none;
             background: none;
             border: none;
-
-            .stick{
-                border: 2px solid black;
-                border-radius: 10px;
-                height: 2px;
-                width: 100%;
-            }
+            cursor: pointer;
             
-        }
-
-        nav{
-            position: absolute;
-            background-color: white;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            height: 100%;
-            width: 50%;
-            margin: 0 -36px;
-            z-index: 10;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 36px;
-
-            a{
-                font-size: 23px;
-                font-weight: 600;
-                text-decoration: none;
-                color: black;
-                font-family: Arial, Helvetica, sans-serif;
-
+            span {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background: #333;
+                margin: 5px 0;
             }
         }
-
-        @media only screen and (min-width: 768px) {
-            .hamburger{
-                display: none;
-            }
-
-            nav{
-                display: flex;
-                justify-content: flex-end;
-                gap: 36px;
-                align-items: center;
-
-                a{
-                    text-decoration: none;
-                    color: inherit;
-                    font-weight: 500;
-                    font-size: 21px;
-                    font-family: Arial, Helvetica, sans-serif;
-                    transition: ease .3s all;
-                }
-
-                a:hover{
-                    color: red;
-                    /*font-size: 23px;*/
-                    transform: scale(1.04);
-                    /*text-decoration: underline; */
-                }
-            }
-        }   
     }
 }
+
