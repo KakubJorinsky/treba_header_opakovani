@@ -17,72 +17,135 @@ header {
     position: fixed;
     top: 0;
     z-index: 1000;
-
-    .wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-        max-width: 1400px;
-        margin: auto;
-        padding: 0 20px;
-
-        .wrapper-logo img {
-            height: 40px;
-            width: auto;
-        }
-
-        nav {
-            display: flex;
-            gap: 24px;
-            align-items: center;
-
-            a {
-                text-decoration: none;
-                color: #555;
-                font-weight: 500;
-                font-size: 16px;
-                transition: 0.3s;
-
-                &:hover {
-                    color: #2b5cba;
-                }
-            }
-            .bakalari-logo{
-                height: 30px;
-                width: auto;
-                margin-right: 10px;
-            }
-
-            .btn-login {
-                display: flex;
-                align-items: center;
-                background-color: #356ad8;
-                color: white;
-                padding: 8px 16px;
-                border-radius: 4px;
-                
-                &:hover {
-                    background-color: #2a52a8;
-                    color: white;
-                }
-            }
-        }
-        
-        .hamburger {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            
-            span {
-                display: block;
-                width: 25px;
-                height: 3px;
-                background: #333;
-                margin: 5px 0;
-            }
-        }
-    }
 }
 
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header .wrapper .wrapper-logo img {
+    height: 40px;
+    width: auto;
+}
+
+header .wrapper nav {
+    position: fixed;
+    top: 80px;
+    right: -100%; 
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px;
+    gap: 30px;
+    transition: 0.4s ease-in-out;
+    border-top: 1px solid #eee;
+}
+
+header .wrapper nav.active {
+    right: 0;
+}
+
+header .wrapper nav a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 20px; 
+    transition: 0.3s;
+}
+
+header .wrapper nav a:hover {
+    color: #2b5cba;
+}
+
+header .wrapper nav .bakalari-logo {
+    height: 30px;
+    width: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+header .wrapper nav .btn-login {
+    display: inline-flex;
+    align-items: center;
+    background-color: #356ad8;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+header .wrapper nav .btn-login:hover {
+    background-color: #2a52a8;
+}
+
+header .wrapper .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+header .wrapper .hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 3px;
+}
+
+header .wrapper .hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+header .wrapper .hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+header .wrapper .hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-7px, -6px);
+}
+
+@media (min-width: 900px) {
+    header .wrapper nav {
+        position: static;
+        height: auto;
+        width: auto;
+        background: transparent;
+        flex-direction: row;
+        padding-top: 0;
+        gap: 24px;
+        border-top: none;
+        opacity: 1; 
+        right: auto;
+    }
+
+    header .wrapper nav a {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 16px;
+        color: #555;
+        font-weight: 500;
+    }
+
+    header .wrapper nav .btn-login {
+        padding: 8px 16px;
+        margin-top: 0;
+    }
+
+    header .wrapper .hamburger {
+        display: none; 
+    }
+}
