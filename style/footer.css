@@ -4,7 +4,7 @@ footer {
     color: #e0e0e0;
     padding-top: 60px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border-top: 4px solid #007bff; 
+    border-top: 1px solid #ffffff; 
 }
 
 .footer-content {
@@ -13,6 +13,7 @@ footer {
     gap: 40px;
     padding-bottom: 50px;
     margin-left: 50px;
+    margin-right: 50px;
 }
 
 .footer-col h3 {
@@ -28,9 +29,9 @@ footer {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 30px;
-    height: 2px;
-    background-color: #007bff;
+    width: 100px;
+    height: 1px;
+    background-color: #ffffff;
 }
 
 .footer-col p {
@@ -87,23 +88,38 @@ footer {
     margin-bottom: 20px;
 }
 
+.social-icons img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    
+}
+
 .social-icons a {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 40px;
     height: 40px;
-    background-color: #333;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     font-size: 0.9rem;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
+    
 }
 
 .social-icons a:hover {
-    background-color: #007bff;
+    transform: scale(1.2);
+
 }
 
 .footer-bottom {
@@ -157,6 +173,7 @@ footer {
 
     .social-icons {
         justify-content: center;
+        
     }
 
     .footer-bottom .wrapper {
